@@ -1,8 +1,21 @@
 import React from 'react';
+import Background from './components/Background';
+import Title from './components/Title';
+
+import { GlobalStyleComponent } from "./Global";
+import { ContentContainer } from './AppStyles';
 
 function App() {
   return (
-    <h1>Hello World</h1>
+    <>
+      <GlobalStyleComponent />
+      <Background />
+      <ContentContainer>
+        <Title />
+      </ContentContainer>
+      
+      {/* <Main></Main> */}
+    </>
   )
 }
 
