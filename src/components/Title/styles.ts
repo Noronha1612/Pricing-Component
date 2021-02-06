@@ -12,7 +12,9 @@ export const Container = styled.div`
     justify-content: center;
     align-items: center;
 
-    height: 200px
+    height: 200px;
+
+    margin-bottom: 40px;
 `;
 
 export const MainTitle = styled.h2`
