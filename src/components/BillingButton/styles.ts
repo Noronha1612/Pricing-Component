@@ -4,10 +4,13 @@ export const Container = styled.div`
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
 
     & > span {
         color: #848ba8;
         font-weight: 500;
+        font-size: 14px;
+        white-space: nowrap;
 
         & > span {
             font-size: 12px;
@@ -24,7 +27,7 @@ export const Container = styled.div`
 export const AnimatedCheck = styled.label<{ checked: boolean }>`
     position: relative;
 
-    margin: 0 12px;
+    margin: 0 8px;
     padding: 4px;
 
     width: 60px;

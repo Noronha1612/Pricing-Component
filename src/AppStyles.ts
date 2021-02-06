@@ -11,7 +11,7 @@ export const ContentContainer = styled.div`
 
 export const MainContent = styled.section`
     width: calc(100% - 60px);
-    max-width: 600px;
+    max-width: 800px;
     padding: 40px 0;
     margin: 0 30px;
     
@@ -24,8 +24,4 @@ export const TopContent = styled.section`
     width: 100;
     padding-bottom: 40px;
     border-bottom: 2px solid #efeff9;
-`
-
-export const BottomContent = styled.section`
-    
 `

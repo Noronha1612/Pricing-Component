@@ -3,10 +3,11 @@ import Background from './components/Background';
 import Title from './components/Title';
 
 import { GlobalStyleComponent } from "./Global";
-import { BottomContent, ContentContainer, MainContent, TopContent } from './AppStyles';
+import { ContentContainer, MainContent, TopContent } from './AppStyles';
 import Slider from './components/Slider';
 import { Content, Price } from './PriceStyles';
 import BillingButton from './components/BillingButton';
+import { Benefit, BenefitsContainer, BottomContent, StartButton } from './BottomContentStyles';
 
 function App() {
   const [ amountViews, setAmountViews ] = useState(100000);
@@ -53,7 +54,13 @@ function App() {
           </TopContent>
 
           <BottomContent>
-            
+            <BenefitsContainer>
+              <Benefit>Unlimited websites</Benefit>
+              <Benefit>100% data ownership</Benefit>
+              <Benefit>Email reports</Benefit>
+            </BenefitsContainer>
+
+            <StartButton>Start my trial</StartButton>
           </BottomContent>
         </MainContent>
       <Background />
