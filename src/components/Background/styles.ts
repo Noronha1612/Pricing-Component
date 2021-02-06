@@ -4,7 +4,7 @@ export const Container = styled.div`
   position: absolute;
   width: 100vw;
   height: 100vh;
-  z-index: -50;
+  z-index: -200;
 `;
 
 export const TopSide = styled.div`
@@ -13,5 +13,5 @@ export const TopSide = styled.div`
   height: 50%;
   background: #f1f5fe;
   border-bottom-left-radius: 200px;
-  z-index: -50;
+  z-index: -200;
 `

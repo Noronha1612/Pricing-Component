@@ -10,6 +10,7 @@ export const GlobalStyleComponent = createGlobalStyle`
 
     button, input, text-area {
         outline: none;
+        border: none;
     }
 
     button, a {
