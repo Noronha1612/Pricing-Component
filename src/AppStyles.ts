@@ -12,6 +12,7 @@ export const ContentContainer = styled.div`
 export const MainContent = styled.section`
     width: calc(100% - 60px);
     max-width: 800px;
+    min-width: 360px;
     padding: 40px 0;
     margin: 0 30px;
     

@@ -20,6 +20,15 @@ export const Container = styled.div`
             border-radius: 20px;
             background: #ffebed;
             padding: 4px 8px;
+
+            margin-left: 8px;
+            &::after {
+                content: '';
+                @media (min-width: 700px) {
+                    content: 'discount';
+                    margin-left: 4px;
+                }
+            }
         }
     }
 `;
@@ -52,5 +61,9 @@ export const AnimatedCheck = styled.label<{ checked: boolean }>`
         transform: translateY(-50%);
 
         transition: .4s;
+    }
+
+    @media (min-width: 700px) {
+        margin: 0 16px;
     }
 `

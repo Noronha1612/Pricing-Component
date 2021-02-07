@@ -2,20 +2,34 @@ import styled from 'styled-components';
 import SliderIconURL from '../../assets/images/icon-slider.svg';
 
 export const Container = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-areas: 
+        'title'
+        'slider'
+        'price';
+
+    @media (min-width: 700px) {
+        grid-template-areas: 
+            'title price'
+            'slider slider';
+    }
 `;
 
 export const SliderTitle = styled.h3`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #8b90a4;
     font-size: 18px;
-`
 
-export const SliderWrapper = styled.div`
+    grid-area: title;
+
+    @media (min-width: 700px) {
+        font-size: 20px;
+    }
 `
 
 export const SliderInput = styled.input`
@@ -28,6 +42,13 @@ export const SliderInput = styled.input`
     border-radius: 20px;
     z-index: 10;
     -webkit-appearance: none;
+
+    grid-area: slider;
+    
+    @media (min-width: 700px) {
+        margin-bottom: 40px;
+        transform: translateY(-30px);
+    }
 
     // Chrome
     &::-webkit-slider-thumb {
