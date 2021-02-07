@@ -5,7 +5,6 @@ import Title from './components/Title';
 import { GlobalStyleComponent } from "./Global";
 import { ContentContainer, MainContent, TopContent } from './AppStyles';
 import Slider from './components/Slider';
-import { Content, Price } from './PriceStyles';
 import BillingButton from './components/BillingButton';
 import { Benefit, BenefitsContainer, BottomContent, StartButton } from './BottomContentStyles';
 
@@ -42,10 +41,8 @@ function App() {
             <Slider
               setAmountViews={ setAmountViews }
               amountViews={ amountViews }
+              valueToPay={ valueToPay }
             />
-            <Price>
-              <Content>${valueToPay.toFixed(2)}</Content> / month
-            </Price>
 
             <BillingButton 
               setIsYearBilling={ setIsYearBilling }

@@ -1,13 +1,15 @@
 import React from 'react';
+import { Content, Price } from './PriceStyles';
 
 import { Container, SliderTitle, SliderInput } from './styles';
 
 interface SliderProps {
     setAmountViews: (number: number) => void;
-    amountViews: number
+    amountViews: number;
+    valueToPay: number;
 }
 
-const Slider: React.FC<SliderProps> = ({ amountViews, setAmountViews }) => {
+const Slider: React.FC<SliderProps> = ({ amountViews, setAmountViews, valueToPay }) => {
 
     return (
         <Container>
@@ -22,6 +24,10 @@ const Slider: React.FC<SliderProps> = ({ amountViews, setAmountViews }) => {
                 defaultValue={amountViews}
                 onChange={event => { setAmountViews(Number(event.target.value)) }}
             />
+            
+            <Price>
+              <Content>${valueToPay.toFixed(2)}</Content> / month
+            </Price>
 
         </Container>
     );

@@ -7,6 +7,8 @@ export const Price = styled.div`
     margin: 60px 0;
     color: #8d909f;
     font-weight: 600;
+
+    grid-area: price;
 `
 
 export const Content = styled.span`
@@ -14,4 +16,8 @@ export const Content = styled.span`
     font-size: 40px;
     font-weight: bold;
     margin-right: 12px;
+
+    @media (min-width: 700px) {
+        font-size: 48px;
+    }
 `
