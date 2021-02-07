@@ -61,6 +61,8 @@ export const SliderInput = styled.input`
         background-size: 35px;
         background-position: center;
         background-color: #12d5c5;
+
+        box-shadow: 0px 20px 20px 0px #affff9;
         
         cursor: grab;
 
