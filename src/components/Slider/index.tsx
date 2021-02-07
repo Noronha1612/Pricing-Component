@@ -7,7 +7,7 @@ interface SliderProps {
     amountViews: number
 }
 
-const Slider: React.FC<SliderProps> = ({ amountViews, setAmountViews, ...props }) => {
+const Slider: React.FC<SliderProps> = ({ amountViews, setAmountViews }) => {
 
     return (
         <Container>
@@ -20,7 +20,6 @@ const Slider: React.FC<SliderProps> = ({ amountViews, setAmountViews, ...props }
                 min={10000}
                 max={1000000}
                 defaultValue={amountViews}
-                activeBarLength={ 100 * (amountViews / 1000000) }
                 onChange={event => { setAmountViews(Number(event.target.value)) }}
             />
 

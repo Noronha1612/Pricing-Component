@@ -15,58 +15,65 @@ export const SliderTitle = styled.h3`
     font-size: 18px;
 `
 
-export const SliderInput = styled.input<{ activeBarLength: number }>`
-    -webkit-appearance: none;  /* Override default CSS styles */
+export const SliderWrapper = styled.div`
+`
+
+export const SliderInput = styled.input`
+    width: calc(100% - 80px);
     position: relative;
-    width: calc(100% - 40px);
+    margin: 40px auto 0;
     height: 12px;
-    margin: 55px auto 0;
 
     background: #e1effa;
     border-radius: 20px;
     z-index: 10;
-    
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
+    -webkit-appearance: none;
 
-        width: ${ props => props.activeBarLength }%;
-        height: 100%;
-        background: #a3f3ea;
-        border-radius: 20px;
-
-        z-index: 15;
-    }
-
-    &::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: ${props => props.activeBarLength}%;
-        transform: translate(-50%, -40%);
-
+    // Chrome
+    &::-webkit-slider-thumb {
+        -webkit-appearance: none;
         width: 55px;
         height: 55px;
-        
         border-radius: 50%;
-        box-shadow: 0px 18px 20px 0px #a3f3ea;
         background-image: url(${ SliderIconURL });
-        background-size: 30px;
-        background-color: #0ed9c5;
-        background-position: center;
         background-repeat: no-repeat;
+        background-size: 35px;
+        background-position: center;
+        background-color: #12d5c5;
+        
+        cursor: grab;
 
-        z-index: 20;
+        transition: .4s;
+    }
+    &::-webkit-slider-thumb:hover {
+        background-color: #7aeade;
+    }
+    &::-webkit-slider-thumb:active {
+        background-color: #24afa8;
+        cursor: grabbing;
+    }
 
-        cursor: pointer;
+    // FF
+    &::-moz-range-thumb {
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        background-image: url(${ SliderIconURL });
+        background-repeat: no-repeat;
+        background-size: 35px;
+        background-position: center;
+        background-color: #12d5c5;
+        border: none;
+        
+        cursor: grab;
+
+        transition: .4s;
     }
-    &:hover::after {
-        background-color: #7be9de;
+    &::-moz-range-thumb:hover {
+        background-color: #7aeade;
     }
-    &:active::after {
-        background-color: #24aea1;
+    &::-moz-range-thumb:active {
+        background-color: #24afa8;
         cursor: grabbing;
     }
 `
