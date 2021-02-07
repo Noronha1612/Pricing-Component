@@ -6,7 +6,7 @@ import { GlobalStyleComponent } from "./Global";
 import { ContentContainer, MainContent, TopContent } from './AppStyles';
 import Slider from './components/Slider';
 import BillingButton from './components/BillingButton';
-import { Benefit, BenefitsContainer, BottomContent, StartButton } from './BottomContentStyles';
+import { Benefit, BenefitsContainer, BottomContent, ButtonWrapper, StartButton } from './BottomContentStyles';
 
 function App() {
   const [ amountViews, setAmountViews ] = useState(100000);
@@ -57,7 +57,9 @@ function App() {
               <Benefit>Email reports</Benefit>
             </BenefitsContainer>
 
-            <StartButton>Start my trial</StartButton>
+            <ButtonWrapper>
+              <StartButton>Start my trial</StartButton>
+            </ButtonWrapper>
           </BottomContent>
         </MainContent>
       <Background />
