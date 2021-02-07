@@ -32,13 +32,15 @@ export const SliderTitle = styled.h3`
     }
 `
 
-export const SliderInput = styled.input`
+export const SliderInput = styled.input.attrs<{ activeBarLength: number }>((props) => ({
+    style: {
+        background: `linear-gradient(90deg, #a8f5ed ${props.activeBarLength}%, #e1effa ${props.activeBarLength}%)`
+    }
+}))<{ activeBarLength: number }>`
     width: calc(100% - 80px);
     position: relative;
     margin: 40px auto 0;
     height: 12px;
-
-    background: #e1effa;
     border-radius: 20px;
     z-index: 10;
     -webkit-appearance: none;

@@ -21,6 +21,7 @@ const Slider: React.FC<SliderProps> = ({ amountViews, setAmountViews, valueToPay
                 type="range"
                 min={10000}
                 max={1000000}
+                activeBarLength={ 100 * ( amountViews / 1000000 ) }
                 defaultValue={amountViews}
                 onChange={event => { setAmountViews(Number(event.target.value)) }}
             />
